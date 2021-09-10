@@ -20,7 +20,7 @@ def fixedpoint(x0, tol=1e-4, maxiter=100):
         x1 = g(x0)
 
         if k<10:
-            e.append(x1-x0)
+            e.append(abs(x1-1.32))
 
         if abs(x1 - x0) < tol:
             print("FixedPoint Iterations: ", k+1)
