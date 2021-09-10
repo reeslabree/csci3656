@@ -23,7 +23,9 @@ def bisection(a, b, coeff, toler):
 
     # enter algorithm
     while (b-a)/2 > toler:
-        e.append((b-a)/2)
+        if(k < 9):
+            e.append((b-a)/2)
+        
         c = (a+b)/2
         if eval(c, coeff) == 0:
             return c
