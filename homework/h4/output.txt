@@ -1,0 +1,155 @@
+MATRIX 1
+Dimenion:
+Rows: 10, Columns: 10
+
+Number of Zeros:
+45
+
+Is Symmetric?:
+no
+
+Is Diagonal?:
+no
+
+Is Orthogonal?:
+no
+
+Rank:
+10
+
+Smallest Singular Value:
+-0.8945641783277622
+
+Largest Singular Value:
+0.7830120825016789
+
+Condition Number:
+124.39975871662216
+
+
+
+MATRIX 2
+Dimenion:
+Rows: 30, Columns: 30
+
+Number of Zeros:
+0
+
+Is Symmetric?:
+yes
+
+Is Diagonal?:
+no
+
+Is Orthogonal?:
+no
+
+Rank:
+30
+
+Smallest Singular Value:
+-0.43137873599357285
+
+Largest Singular Value:
+0.45840537987121294
+
+Condition Number:
+206.6726633597015
+
+
+
+MATRIX 3
+Dimenion:
+Rows: 400, Columns: 400
+
+Number of Zeros:
+159200
+
+Is Symmetric?:
+no
+
+Is Diagonal?:
+no
+
+Is Orthogonal?:
+no
+
+Rank:
+399
+
+Smallest Singular Value:
+-0.10000000000006394
+
+Largest Singular Value:
+0.1000000000001308
+
+Condition Number:
+7.265816236545314e+16
+
+Could not solve for a random right-hand-side
+Could not solve for a random right-hand-side
+Could not solve for a random right-hand-side
+Could not solve for a random right-hand-side
+Could not solve for a random right-hand-side
+
+
+MATRIX 4
+Dimenion:
+Rows: 50, Columns: 50
+
+Number of Zeros:
+0
+
+Is Symmetric?:
+yes
+
+Is Diagonal?:
+no
+
+Is Orthogonal?:
+no
+
+Rank:
+50
+
+Smallest Singular Value:
+-0.8497420649003002
+
+Largest Singular Value:
+1.0
+
+Condition Number:
+1.0000000000000016
+
+
+
+MATRIX 5
+Dimenion:
+Rows: 625, Columns: 625
+
+Number of Zeros:
+387600
+
+Is Symmetric?:
+yes
+
+Is Diagonal?:
+no
+
+Is Orthogonal?:
+no
+
+Rank:
+625
+
+Smallest Singular Value:
+-0.23893659901339936
+
+Largest Singular Value:
+0.17591596832421133
+
+Condition Number:
+273.30605737670675
+
+
+
