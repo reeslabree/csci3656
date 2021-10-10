@@ -32,10 +32,12 @@ def error_compare(x_truth, x):
 
 def main():
     files = []
-    for i in range(1,6):
+    for i in range(4,5):
         files.append("mat"+str(i)+"-1.txt")
 
-    for n, file in enumerate(files):
+    print(files)
+
+    for file in files:
         print("Loading: " + file)
 
         # load matrix
@@ -57,17 +59,17 @@ def main():
 
         # 4. solve with Jacobi
         x_j = jacobi.solve(A, b) 
-        print("Jacobi Relative Error:               " + error_compare(x_truth, x_j))
+        print("              Jacobi Relative Error: " + error_compare(x_truth, x_j))
         
         # 5. Solve with Gauss-Seidel
         x_gs = gauss.solve(A, b)
-        print("Gauss-Seidel Relative Error:         " + error_compare(x_truth, x_gs))
+        print("        Gauss-Seidel Relative Error: " + error_compare(x_truth, x_gs))
 
         # timing study for each
         print("\n--TIMING STUDY--")
         print("LU Decomp / Cholesky Time: " + timing(luchol.solve, A, b))
-        print("Jacobi Time:               " + timing(jacobi.solve, A, b))
-        print("Gauss-Seidel Time:         " + timing(gauss.solve, A, b))
+        print("              Jacobi Time: " + timing(jacobi.solve, A, b))
+        print("        Gauss-Seidel Time: " + timing(gauss.solve, A, b))
 
 
 if __name__ == "__main__":
