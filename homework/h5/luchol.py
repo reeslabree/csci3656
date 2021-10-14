@@ -6,7 +6,7 @@ import helpers as hp
 
 def solve(A, b):
     # check for symmetric
-    is_symmetric = np.allclose(mat, mat.T, rtol=rtol, atol=atol) 
+    is_symmetric = np.allclose(A, A.T, rtol=1e-5, atol=1e-8) 
 
     # if symmetric, solve with cholesky
     if(is_symmetric == True):

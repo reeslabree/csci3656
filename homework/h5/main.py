@@ -11,7 +11,7 @@ def load_matrix(filename):
     mat = []
 
     with open(filename) as file:
-        rows = (csv.reader(file, delimiter=','))
+        rows = (csv.reader(file)) #, delimiter=','))
         
         for row in rows:
             mat.append(row)
@@ -32,44 +32,48 @@ def error_compare(x_truth, x):
 
 def main():
     files = []
-    for i in range(4,5):
+    for i in range(1,6):
         files.append("mat"+str(i)+"-1.txt")
 
-    print(files)
-
     for file in files:
-        print("Loading: " + file)
+        print("\n\nAnalyzing: " + file)
 
         # load matrix
-        A = load_matrix(file)
-        
-        # 1. create right hand of 1's
+        A = np.array(load_matrix(file), dtype='float')
+    
+        # 1. generate right hand of ones
         b = []
-        for i in range(len(A[0])):
-            b.append([1])
-
+        for i in range(len(A)):
+            b.append(1)
+        b = np.array(b, dtype='float')
+        
+        
         # 2. solve with generic linear solver
-        x_truth = np.linalg.solve(A, b)
+        try:
+            x_truth = np.linalg.solve(A, b)
+        except np.linalg.LinAlgError:
+            print("Matrix is singular and cannot be solved")
+            break
 
         print("--RELATIVE ERROR COMPARISON--")
 
         # 3. solve with LU decomp or Cholesky
         x_luc = luchol.solve(A, b)
-        print("LU Decomp / Cholesky Relative Error: " + error_compare(x_truth, x_luc))
+        print("LU Decomp / Cholesky Relative Error: " + str(error_compare(x_truth, x_luc)))
 
         # 4. solve with Jacobi
         x_j = jacobi.solve(A, b) 
-        print("              Jacobi Relative Error: " + error_compare(x_truth, x_j))
+        print("              Jacobi Relative Error: " + str(error_compare(x_truth, x_j)))
         
         # 5. Solve with Gauss-Seidel
         x_gs = gauss.solve(A, b)
-        print("        Gauss-Seidel Relative Error: " + error_compare(x_truth, x_gs))
+        print("        Gauss-Seidel Relative Error: " + str(error_compare(x_truth, x_gs)))
 
         # timing study for each
         print("\n--TIMING STUDY--")
-        print("LU Decomp / Cholesky Time: " + timing(luchol.solve, A, b))
-        print("              Jacobi Time: " + timing(jacobi.solve, A, b))
-        print("        Gauss-Seidel Time: " + timing(gauss.solve, A, b))
+        print("LU Decomp / Cholesky Time: " + str(timing(luchol.solve, A, b)))
+        print("              Jacobi Time: " + str(timing(jacobi.solve, A, b)))
+        print("        Gauss-Seidel Time: " + str(timing(gauss.solve, A, b)))
 
 
 if __name__ == "__main__":
