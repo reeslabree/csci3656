@@ -88,14 +88,15 @@ def qualify_vandermonde(c, x, y):
 
 # calculates the maximum error
 def error_vandermonde(x, y, c):
+    print("length: ", len(x))
     error_max = 0
 
     for i, x_i in enumerate(x):
-        error = np.abs(y[i]-np.polyval(c, x_i)) / np.abs(y[i])
+        error = (np.abs(y[i]-np.polyval(c, x_i)) / np.abs(y[i]))
         if error > error_max:
             error_max = error
 
-    return error
+    return error_max
 
 # main program
 def main(theta = [1, 10]):
