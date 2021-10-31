@@ -1,0 +1,104 @@
+       Size:  (101, 40)
+       Rank:  40
+Condition #:  74.87666090810836 
+
+       Size:  (101, 41)
+       Rank:  41
+Condition #:  103.8003645382859 
+
+       Size:  (101, 42)
+       Rank:  42
+Condition #:  152.2856078789593 
+
+       Size:  (101, 43)
+       Rank:  43
+Condition #:  217.56037976335492 
+
+       Size:  (101, 44)
+       Rank:  44
+Condition #:  328.89202841883514 
+
+       Size:  (101, 45)
+       Rank:  45
+Condition #:  483.78052898530706 
+
+       Size:  (101, 46)
+       Rank:  46
+Condition #:  753.0464969100946 
+
+       Size:  (101, 47)
+       Rank:  47
+Condition #:  1140.0742240739987 
+
+       Size:  (101, 48)
+       Rank:  48
+Condition #:  1826.7931127929016 
+
+       Size:  (101, 49)
+       Rank:  49
+Condition #:  2846.422274367024 
+
+       Size:  (101, 50)
+       Rank:  50
+Condition #:  4695.087418605785 
+
+       Size:  (101, 51)
+       Rank:  51
+Condition #:  7530.548252628007 
+
+       Size:  (101, 52)
+       Rank:  52
+Condition #:  12789.376548936905 
+
+       Size:  (101, 53)
+       Rank:  53
+Condition #:  21122.716873838453 
+
+       Size:  (101, 54)
+       Rank:  54
+Condition #:  36949.483208862126 
+
+       Size:  (101, 55)
+       Rank:  55
+Condition #:  62868.33366126187 
+
+       Size:  (101, 56)
+       Rank:  56
+Condition #:  113329.35745253562 
+
+       Size:  (101, 57)
+       Rank:  57
+Condition #:  198770.68211700761 
+
+       Size:  (101, 58)
+       Rank:  58
+Condition #:  369475.9186646051 
+
+       Size:  (101, 59)
+       Rank:  59
+Condition #:  668493.2863168722 
+
+       Size:  (101, 60)
+       Rank:  60
+Condition #:  1282274.019744697 
+
+       Size:  (101, 61)
+       Rank:  61
+Condition #:  2395303.2392842993 
+
+       Size:  (101, 62)
+       Rank:  62
+Condition #:  4745459.926335891 
+
+       Size:  (101, 63)
+       Rank:  63
+Condition #:  9161533.466830608 
+
+       Size:  (101, 64)
+       Rank:  64
+Condition #:  18765737.971648157 
+
+       Size:  (101, 65)
+       Rank:  65
+Condition #:  37486287.323160835 
+
