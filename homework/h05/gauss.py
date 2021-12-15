@@ -13,10 +13,7 @@ def solve(A, b, tol=1e-6):
     P, L, U = scipy.linalg.lu(A) 
     L = np.subtract(L, D)
     U = np.subtract(U, D)
-
-    # check that A = D + L + U
-    assert(True == np.allclose(A, np.add(np.add(D, L), U)))
-    
+ 
     for i in range(50):
         x_new = np.zeros_like(x)
         for i in range(A.shape[0]):

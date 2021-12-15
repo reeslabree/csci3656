@@ -1,0 +1,50 @@
+Analyzing: mat1-1.txt
+--RELATIVE ERROR COMPARISON--
+LU Decomp / Cholesky Relative Error: 3.472290573398475e-16
+              Jacobi Relative Error: nan
+        Gauss-Seidel Relative Error: 2.261214307758401e-08
+
+--TIMING STUDY--
+LU Decomp / Cholesky Time: -0.01293962
+              Jacobi Time: -0.01936966
+        Gauss-Seidel Time: -0.028678759999999998
+
+
+Analyzing: mat2-1.txt
+--RELATIVE ERROR COMPARISON--
+LU Decomp / Cholesky Relative Error: 1.3071802186747859e-15
+              Jacobi Relative Error: nan
+        Gauss-Seidel Relative Error: 2.1344532600690355e-08
+
+--TIMING STUDY--
+LU Decomp / Cholesky Time: -0.04085504000000001
+              Jacobi Time: -0.06582942
+        Gauss-Seidel Time: -0.030392499999999992
+
+
+Analyzing: mat3-1.txt
+--RELATIVE ERROR COMPARISON--
+LU Decomp / Cholesky Relative Error: 2.4635533768438817e-15
+              Jacobi Relative Error: nan
+        Gauss-Seidel Relative Error: nan
+
+--TIMING STUDY--
+LU Decomp / Cholesky Time: -0.01036692
+              Jacobi Time: -0.010863699999999999
+        Gauss-Seidel Time: -0.03355832
+
+
+Analyzing: mat4-1.txt
+--RELATIVE ERROR COMPARISON--
+LU Decomp / Cholesky Relative Error: 1.2775301001988179e-15
+              Jacobi Relative Error: nan
+        Gauss-Seidel Relative Error: 0.003351530213722085
+
+--TIMING STUDY--
+LU Decomp / Cholesky Time: -0.0008083999999999998
+              Jacobi Time: -0.0010035600000000001
+        Gauss-Seidel Time: -0.008412459999999997
+
+
+Analyzing: mat5-1.txt
+Matrix is singular and cannot be solved

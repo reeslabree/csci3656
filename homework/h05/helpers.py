@@ -2,37 +2,42 @@
 import numpy as np
 
 def fwd_sub(A, b):
-    A = np.flipud(A)
-    A = np.fliplr(A)
-#    b = np.flipud(b)
-    b = np.fliplr(b)
+    n = b.size
+    x = np.zeros_like(b)
 
-    # fwd sub is just upside down and flipped forward sub
-    return back_sub(A, b)
+    x[n-1] = b[n-1]/A[n-1, n-1]
+    C = np.zeros((n,n))
+    for i in range(0, n, 1):
+        bb = 0
+        for j in range (0, i):
+            bb += A[i, j]*x[j]
+
+        C[i, i] = b[i] - bb
+        x[i] = C[i, i]/A[i, i]
+
+    return x
 
 def back_sub(A, b):
-    x = np.zeros(np.shape(b))
-  
-    for j in range(len(x)-1, -1, -1):
-        sum_k = 0
-        for k in range(j+1, len(x)):
-            sum_k += A[j][k]*x[k]
+    n = b.size
+    x = np.zeros_like(b)
 
-        x[j] = (b[j] - sum_k) / A[j][j]
+    x[n-1] = b[n-1]/A[n-1, n-1]
+    C = np.zeros((n,n))
+    for i in range(n-2, -1, -1):
+        bb = 0
+        for j in range (i+1, n):
+            bb += A[i, j]*x[j]
+
+        C[i, i] = b[i] - bb
+        x[i] = C[i, i]/A[i, i]
+
+    return x
 
 def dlu(A):
-    # split
-    D = np.diag(np.diag(A))
+    U = np.triu(A, 1)
+    L = np.tril(A, -1)
+    D = np.tril(np.triu(A))
 
-    L = np.tril(A)
-    U = np.triu(A)
-
-    L = np.subtract(L, D)
-    U = np.subtract(U, D)
-
-    # check that A = D + L + U
-    assert True == np.allclose(A, np.add(np.add(D, L), U)), "yo DLU don't look right"
- 
     return D, L, U
 
 def test_back_sub():
@@ -62,6 +67,9 @@ def test_dlu():
 
     D, L, U = dlu(A)
 
+    print("A: ", A)
+    print("D, L, U\n", D, "\n", L, "\n", U)
+
 #test_dlu()
-test_fwd_sub()
+#test_fwd_sub()
 #test_back_sub()
